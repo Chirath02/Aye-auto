@@ -1,0 +1,115 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/flContent"
+    tools:context="layout.BookAutoForm">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/bookFrom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="From"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="99dp"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <EditText
+            android:id="@+id/bookTo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="To"
+            android:layout_marginTop="31dp"
+            app:layout_constraintTop_toBottomOf="@+id/bookFrom"
+            android:layout_marginRight="99dp"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <EditText
+            android:id="@+id/bookDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="date"
+            android:layout_marginTop="30dp"
+            app:layout_constraintTop_toBottomOf="@+id/bookTo"
+            android:layout_marginRight="99dp"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <EditText
+            android:id="@+id/bookTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="time"
+            android:layout_marginTop="30dp"
+            app:layout_constraintTop_toBottomOf="@+id/bookDate"
+            android:layout_marginRight="99dp"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <Button
+            android:id="@+id/searchButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="159dp"
+            android:layout_marginTop="174dp"
+            android:text="Search"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bookTime" />
+
+        <EditText
+            android:id="@+id/enterSeats"
+            android:layout_width="114dp"
+            android:layout_height="36dp"
+            android:ems="10"
+            android:inputType="numberSigned"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="322dp"
+            tools:layout_editor_absoluteX="269dp" />
+
+        <EditText
+            android:id="@+id/showLuggage"
+            android:layout_width="176dp"
+            android:layout_height="44dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="23dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Number of luggages"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/showSeats" />
+
+        <EditText
+            android:id="@+id/showSeats"
+            android:layout_width="173dp"
+            android:layout_height="41dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Number of seats"
+            tools:layout_editor_absoluteX="25dp"
+            tools:layout_editor_absoluteY="323dp" />
+
+        <EditText
+            android:id="@+id/enterLuggage"
+            android:layout_width="117dp"
+            android:layout_height="39dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="28dp"
+            android:ems="10"
+            android:inputType="numberSigned"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/enterSeats" />
+
+    </android.support.constraint.ConstraintLayout>
+</FrameLayout>
