@@ -6,6 +6,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -18,6 +19,7 @@ import android.view.MenuItem;
 
 import layout.BookAutoForm;
 
+import static android.R.attr.fragment;
 import static in.ac.amrita.foss.ayeauto.R.layout.auto_stand_maps;
 
 public class MainActivity extends AppCompatActivity
@@ -76,19 +78,23 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
-       int id = item.getItemId();
-        if (id == R.id.book_auto) {
+        int id = item.getItemId();
+        Fragment fragment = null;
 
+        if (id == R.id.book_auto) {
+            fragment = new BookAutoForm();
         } else if (id == R.id.share_auto) {
 
         } else if (id == R.id.find_auto) {
 
         } else if (id == R.id.find_stand) {
             startActivity(new Intent(MainActivity.this, AutoStand.class));
-        } else if (id == R.id.nav_share) {
+        }
 
-        } else if (id == R.id.nav_send) {
-
+        if (fragment != null) {
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.content_frame, fragment);
+            ft.commit();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
